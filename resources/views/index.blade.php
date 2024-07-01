@@ -1,7 +1,7 @@
 
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head><script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=905Sm7q34AGzhsTnvoijfMYcw7-lMGYCahal4So7anAcr6QRTK0oBIbMeSG6G95Arxb_CR6G13EQDcubsrDqB-ZiixZpETIuDdJ_0BJhNZI" charset="UTF-8"></script>
+  <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,6 +23,7 @@
     <link rel="icon" href="{{ asset('icones/favicon.ico') }}">
     <meta name="theme-color" content="#712cf9">
 
+    
 
     <style>
       .bd-placeholder-img {
@@ -165,6 +166,6 @@
   <script src="/js/color-modes.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.js"></script>
-
+  <script src="/js/projeto.js"></script>
 </body>
 </html>
