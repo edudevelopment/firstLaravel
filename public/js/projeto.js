@@ -17,10 +17,14 @@ function deletarRegistroPaginacao(rotaUrl, idDoRegistro) {
             },
         }).done(function (data) {
             $.unblockUI();
-            alert(data);
+            if (data.success) {
+                window.location.reload();
+            } else {
+                alert('Não foi possivel excluir');
+            }
         }).fail(function (data) {
             $.unblockUI();
-            alert('Eduardo')
+            alert('Não foi possivel buscar os dados')
         })
     }
 }
