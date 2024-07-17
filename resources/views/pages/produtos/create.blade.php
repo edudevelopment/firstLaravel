@@ -9,7 +9,7 @@
 
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Nome</label>
-        <input type="text" class="form-control @error('nome') is-invalid @enderror" aria-describedby="emailHelp" name="nome">
+        <input type="text" value="{{ old('nome') }}" class="form-control @error('nome') is-invalid @enderror" aria-describedby="emailHelp" name="nome">
         @if ($errors->has('nome'))
             <div class="invalid-feedback"> {{ $errors->first('nome') }} </div>
           
@@ -17,12 +17,12 @@
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Valor</label>
-        <input type="text" class="form-control @error('valor') is-invalid @enderror" name="valor">
+        <input id="mascara_valor" value="{{ old('valor') }}"  type="text" class="form-control @error('valor') is-invalid @enderror" name="valor">
         @if ($errors->has('valor'))
             <div class="invalid-feedback"> {{ $errors->first('valor') }} </div>
           
         @endif
       </div>
-      <button type="submit" class="btn btn-primary">Cadastrar</button>
+      <button type="submit" class="btn btn-primary">Gravar</button>
   </form>
 @endsection
