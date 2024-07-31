@@ -1,3 +1,7 @@
+function excluido () {
+    return alert('Excluido com sucesso');
+}
+
 function deletarRegistroPaginacao(rotaUrl, idDoRegistro) {
     if (confirm('Deseja confirmar a exlusão?')) {
         $.ajax({
@@ -19,6 +23,8 @@ function deletarRegistroPaginacao(rotaUrl, idDoRegistro) {
             $.unblockUI();
             if (data.success) {
                 window.location.reload();
+                excluido();
+                
             } else {
                 alert('Não foi possivel excluir');
             }
