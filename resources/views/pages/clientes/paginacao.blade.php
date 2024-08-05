@@ -21,7 +21,6 @@
                    <th>Nome</th>
                    <th>Email</th>
                    <th>Endereço</th>
-                   <th>Logradouro</th>
                    <th>CEP</th>
                    <th>CPF</th>
                    <th>Ações</th>
@@ -33,10 +32,8 @@
                     <td>{{ $cliente->name }}</td>
                     <td>{{ $cliente->email }}</td>
                     <td>{{ $cliente->endereco }}</td>
-                    <td>{{ $cliente->logradouro }}</td>
                     <td>{{ $cliente->cep }}</td>
                     <td>{{ $cliente->cpf }}</td>
-                    <td>{{ 'R$' . ' ' . number_format($produto->valor, 2, ',', '.') }}</td>
                     <td> 
                         <a href="{{ route('atualizar.cliente', $cliente->id) }}" class="btn btn-light btn-sm">
                           Editar

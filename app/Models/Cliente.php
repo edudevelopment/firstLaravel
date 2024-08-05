@@ -19,12 +19,12 @@ class Cliente extends Model
         'bairro',
     ];
 
-    public function getProdutoPesquisarIndex(string $search = '') {
+    public function getClientePesquisarIndex(string $search = '') {
 
         $cliente = $this->where(function($query) use ($search) {
             if ($search) {
-                $query->where('cpf', $search);
-                $query->orWhere('cpf', 'LIKE', "%{$search}%");
+                $query->where('name', $search);
+                $query->orWhere('name', 'LIKE', "%{$search}%");
             }
         })->get();
 

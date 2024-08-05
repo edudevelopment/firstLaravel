@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 
 class ClienteController extends Controller {
     private Cliente $cliente;
+    
     public function __construct(Cliente $cliente) {
         $this->cliente = $cliente;
     }
@@ -34,7 +35,6 @@ class ClienteController extends Controller {
         if ($request->method() == "POST") {
             $data = $request->all();
             $componentes = new Componentes();
-            $data['valor'] = $componentes->formatacaoMascaraDinheiroDecimal($data['valor']);
             Cliente::create($data);
 
             Toastr::success('Gravado com sucesso');

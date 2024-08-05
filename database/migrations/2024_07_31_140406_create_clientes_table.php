@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->nullable();
             $table->string('endereco')->nullable();
-            $table->string('logradouro')->nullable();
+            $table->string('nascimento')->nullable();
             $table->string('cep')->nullable();
             $table->string('cpf');
             $table->timestamps();
