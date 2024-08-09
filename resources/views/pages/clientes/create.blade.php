@@ -26,8 +26,17 @@
       </div>
 
       <div class="mb-3">
+        <label class="form-label">CEP</label>
+        <input id="cep" value="{{ old('cep') }}" class="form-control @error('cep') is-invalid @enderror" name="cep">
+        @if ($errors->has('cep'))
+            <div class="invalid-feedback"> {{ $errors->first('cep') }} </div>
+          
+        @endif
+      </div>
+
+      <div class="mb-3">
         <label class="form-label">Endereço</label>
-        <input value="{{ old('endereco') }}" class="form-control @error('endereco') is-invalid @enderror" aria-describedby="endereco" name="endereco">
+        <input id="logradouro" onclick="autocep()" autocomplete="on" value="{{ old('endereco') }}" class="form-control @error('endereco') is-invalid @enderror" name="endereco">
         @if ($errors->has('endereco'))
             <div class="invalid-feedback"> {{ $errors->first('endereco') }} </div>
           
@@ -39,15 +48,6 @@
         <input value="{{ old('nascimento') }}" class="form-control @error('nascimento') is-invalid @enderror" aria-describedby="emailHelp" name="nascimento">
         @if ($errors->has('nascimento'))
             <div class="invalid-feedback"> {{ $errors->first('nascimento') }} </div>
-          
-        @endif
-      </div>
-
-      <div class="mb-3">
-        <label class="form-label">CEP</label>
-        <input value="{{ old('cep') }}" class="form-control @error('cep') is-invalid @enderror" aria-describedby="emailHelp" name="cep">
-        @if ($errors->has('cep'))
-            <div class="invalid-feedback"> {{ $errors->first('cep') }} </div>
           
         @endif
       </div>
